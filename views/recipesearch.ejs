@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MacroPlanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+    <header class="navHeader scrolledSticky" id="navHeader">
+        <nav>
+            <ul>
+                <li class="navHeaderLogo">
+                    <div onclick="location.href='/';" style="cursor: pointer;">
+                        <img src="images/placeholderlogo.png">
+                        <h1>MacroPlanner</h1>
+                    </div>
+                </li>
+                <li class=" navHeaderSpacer">
+                </li>
+                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li onclick="location.href='/blog';"><a>Blog</a></li>
+                <li onclick="location.href='/about';"><a>About</a></li>
+                <li onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="recipeSearchResultNumSection">
+        <p  id="resultsfoundtext">Loading Results...</p>
+    </section>
+    <section class="recipeSearchSection">
+        <div class="recipesHeaderSearchDiv">
+            <div class="recipesHeaderSearchDivTop">
+                <h1 class="recipesHeaderSearchTitle">Find a New Recipe</h1>
+                <h1 class="recipesHeaderSearchTitle2"><a href="https://www.calculator.net/macro-calculator.html" target="_blank">Calculate your macronutrient needs</a></h1>
+                <div class="recipesHeaderSearchBox">
+                    <h1>Calories</h1>
+                    <div class="sliderInput">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="sliderRangeInput">
+                        <input type="range" class="minRangeInput" min="0" max="2000" value="0" step="10">
+                        <input type="range" class="maxRangeInput" min="0" max="2000" value="3000" step="10">
+                    </div>
+                    <div class="recipesHeaderSearchBoxInputDiv">
+                        <div>
+                            <h1>min calories</h1>
+                            <input type="number" class="minInput" value="0" id="calorieMin">
+                        </div>
+                        <h1>~</h1>
+                        <div>
+                            <h1>max calories</h1>
+                            <input type="number" class="maxInput" value="2000" id="calorieMax">
+                        </div>
+                    </div>
+                </div>
+                <div class="recipesHeaderSearchBox">
+                    <h1>Protein</h1>
+                    <div class="sliderInput two">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="sliderRangeInput two">
+                        <input type="range" class="minRangeInput" min="0" max="200" value="0" step="5">
+                        <input type="range" class="maxRangeInput" min="0" max="200" value="200" step="5">
+                    </div>
+                    <div class="recipesHeaderSearchBoxInputDiv two">
+                        <div>
+                            <h1>min protein</h1>
+                            <input type="number" class="minInput" value="0" id="proteinMin">
+                        </div>
+                        <h1>~</h1>
+                        <div>
+                            <h1>max protein</h1>
+                            <input type="number" class="maxInput" value="200" id="proteinMax">
+                        </div>
+                    </div>
+                </div>
+                <div class="recipesHeaderSearchBox">
+                    <h1>Carbs</h1>
+                    <div class="sliderInput three">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="sliderRangeInput three">
+                        <input type="range" class="minRangeInput" min="0" max="200" value="0" step="5">
+                        <input type="range" class="maxRangeInput" min="0" max="200" value="200" step="5">
+                    </div>
+                    <div class="recipesHeaderSearchBoxInputDiv three">
+                        <div>
+                            <h1>min carbs</h1>
+                            <input type="number" class="minInput" value="0" id="carbsMin">
+                        </div>
+                        <h1>~</h1>
+                        <div>
+                            <h1>max carbs</h1>
+                            <input type="number" class="maxInput" value="200" id="carbsMax">
+                        </div>
+                    </div>
+                </div>
+                <div class="recipesHeaderSearchBox">
+                    <h1>Fat</h1>
+                    <div class="sliderInput four">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="sliderRangeInput four">
+                        <input type="range" class="minRangeInput" min="0" max="200" value="0" step="5">
+                        <input type="range" class="maxRangeInput" min="0" max="200" value="200" step="5">
+                    </div>
+                    <div class="recipesHeaderSearchBoxInputDiv four">
+                        <div>
+                            <h1>min fat</h1>
+                            <input type="number" class="minInput" value="0" id="fatMin">
+                        </div>
+                        <h1>~</h1>
+                        <div>
+                            <h1>max fat</h1>
+                            <input type="number" class="maxInput" value="200" id="fatMax">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recipesHeaderSearchDivBottom">
+                <button type="button" class="recipeHeaderSearchButton"
+                    onclick="searchrecipe()">Search</button>
+            </div>
+        </div>
+        <div class="recipeSearchResultDiv" id="recipeSearchResultDiv">
+            <div class="recipeSearchResultDivTop" id="recipeSearchResultDivTop">
+
+            </div>
+            <button type="button" class="recipeSearchLoadMoreButton" id="recipeSearchLoadMoreButton" onclick="loadSearchCards()" style="display: none">Load More</button>
+            <!-- <div class="recipeSearchCardContainer">
+                <img class="recipeSearchCardBackImg" src="images/apple.jpg">
+                <div class="recipeSearchCard">
+                    <img src="images/gray.jpg">
+                    <div class="recipeSearchCardText">
+                        <p class="recipeSearchCardRecipe">Strawberry Maple Pancakes with also you know</p>
+                        <div class="recipeSearchCardInfo">
+                            <div class="recipeSearchCardInfoPart">
+                                <p>2 servings</p>
+                                <p>20 Minutes</p>
+                            </div>
+                            <div class="recipeSearchCardInfoDivider"></div>
+                            <div class="recipeSearchCardInfoPart">
+                                <p>400 Calories</p>
+                                <p>20g Protein</p>
+                            </div>
+                            <div class="recipeSearchCardInfoPart">
+                                <p>58g Carbs</p>
+                                <p>28g Fat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <section>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+    </section>
+    <footer>
+        123 Main Street • 555-555-5555 • support@us.com
+    </footer>
+</body>
+<script src="./searchSlider.js"></script>
+<script src="./findrecipe.js"></script>
+
+</html>

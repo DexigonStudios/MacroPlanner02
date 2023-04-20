@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MacroPlanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+    <header class="navHeader scrolledSticky" id="navHeader">
+        <nav>
+            <ul>
+                <li class="navHeaderLogo">
+                    <div onclick="location.href='/';" style="cursor: pointer;">
+                        <img src="images/placeholderlogo.png">
+                        <h1>MacroPlanner</h1>
+                    </div>
+                </li>
+                <li class=" navHeaderSpacer">
+                </li>
+                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li onclick="location.href='/blog';"><a>Blog</a></li>
+                <li onclick="location.href='/about';"><a>About</a></li>
+                <li onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="blogSection">
+        <div class="blogSectionLeft">
+            <h1 class="blogSectionTitle" id="blogSectionTitle"></h1>
+            <p class="blogSectionDate" id="blogSectionDate"></p>
+            <img class="blogSectionImg" id="blogSectionImg" src="images/gray.jpg">
+            <div class="blogSectionText" id="blogSectionText"></div>
+        </div>
+        <div class="blogSectionRight">
+            <p class="recipePageSideBarTitle">Related Blogs</p>
+            <div class="recipePageSideBarDivider"></div>
+            <div class="recipePageSideBarBox">
+                <div class="blogWideCardContainer" id="1w">
+                    <div class="blogWideCardContainerImgDiv">
+                        <img class="blogWideCardContainerImg" id="1blogWideCardContainerImg" src="images/gray.jpg">
+                    </div>
+                    <img class="blogWideCardContainerImgb" id="1blogWideCardContainerImgb" src="images/gray.jpg">
+                    <div class="blogWideCardContainerText">
+                        <p class="blogWideCardContainerRecipe" id="1blogWideCardContainerRecipe"></p>
+                    </div>
+                </div>
+                <div class="blogWideCardContainer" id="2w">
+                    <img class="blogWideCardContainerImgb" id="2blogWideCardContainerImgb" src="images/gray.jpg">
+                    <div class="blogWideCardContainerImgDiv">
+                        <img class="blogWideCardContainerImg" id="2blogWideCardContainerImg" src="images/gray.jpg">
+                    </div>
+                    <div class="blogWideCardContainerText">
+                        <p class="blogWideCardContainerRecipe" id="2blogWideCardContainerRecipe"></p>
+                    </div>
+                </div>
+                <div class="blogWideCardContainer" id="3w">
+                    <img class="blogWideCardContainerImgb" id="3blogWideCardContainerImgb" src="images/gray.jpg">
+                    <div class="blogWideCardContainerImgDiv">
+                        <img class="blogWideCardContainerImg" id="3blogWideCardContainerImg" src="images/gray.jpg">
+                    </div>
+                    <div class="blogWideCardContainerText">
+                        <p class="blogWideCardContainerRecipe" id="3blogWideCardContainerRecipe"></p>
+                    </div>
+                </div>
+                <div class="blogWideCardContainer" id="4w">
+                    <img class="blogWideCardContainerImgb" id="4blogWideCardContainerImgb" src="images/gray.jpg">
+                    <div class="blogWideCardContainerImgDiv">
+                        <img class="blogWideCardContainerImg" id="4blogWideCardContainerImg" src="images/gray.jpg">
+                    </div>
+                    <div class="blogWideCardContainerText">
+                        <p class="blogWideCardContainerRecipe" id="4blogWideCardContainerRecipe"></p>
+                    </div>
+                </div>
+                <div class="blogWideCardContainer" id="5w">
+                    <img class="blogWideCardContainerImgb" id="5blogWideCardContainerImgb" src="images/gray.jpg">
+                    <div class="blogWideCardContainerImgDiv">
+                        <img class="blogWideCardContainerImg" id="5blogWideCardContainerImg" src="images/gray.jpg">
+                    </div>
+                    <div class="blogWideCardContainerText">
+                        <p class="blogWideCardContainerRecipe" id="5blogWideCardContainerRecipe"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div class="reciperecentlyaddedbanner">Recent Blogs</div>
+        <div class="allBlogsDiv" id="allBlogsDiv"></div>
+    </section>
+    <!-- <section>
+        <div class="emptybox"></div>
+        <div class="emptybox"></div>
+    </section> -->
+    <footer>
+        123 Main Street • 555-555-5555 • example@us.com
+    </footer>
+    <script src="./loadblog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MacroPlanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+    <header class="navHeader scrolledSticky" id="navHeader">
+        <nav>
+            <ul>
+                <li class="navHeaderLogo">
+                    <div onclick="location.href='/';" style="cursor: pointer;">
+                        <img src="images/placeholderlogo.png">
+                        <h1>MacroPlanner</h1>
+                    </div>
+                </li>
+                <li class=" navHeaderSpacer">
+                </li>
+                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li onclick="location.href='/blog';"><a>Blog</a></li>
+                <li onclick="location.href='/about';"><a>About</a></li>
+                <li onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="contactHeader">
+        <p>Blog</p>
+    </div>
+    <section id="blogSection" style="display: none;">
+        <div class="mainBlogDiv" id="mainBlogDiv">
+            <p class="mainBlogInfo">
+                <span class="mainBlogTitle" id="mainBlogTitle"></span><br>
+                <span class="mainBlogDate" id="mainBlogDate"></span><br>
+                <span class="mainBlogText" id="mainBlogText"></span><br>
+                <!-- <span class="mainBlogReadMore" id="mainBlogReadMore">Read More</span><br> -->
+            </p>
+            <div class="mainBlogImgContainer">
+                <img class="mainBlogImg" id="mainBlogImg" src="images/gray.jpg">
+            </div>
+        </div>
+        <div class="reciperecentlyaddedbanner">
+            All Blogs
+        </div>
+        <div class="allBlogsDiv" id="allBlogsDiv">
+            <!-- <div class="blogCardContainer">
+                <img id="blogImg" src="images/gray.jpg">
+                <p>
+                    <span class="blogTitle" id="blogTitle">Title</span><br>
+                    <span class="blogDate" id="blogDate">Date</span><br>
+                    <span class="blogReadMore" id="blogReadMore">Read More</span><br>
+                </p>
+            </div> -->
+        </div>
+    </section>
+    <section id="emptySection" style="display: block;">
+        <div class="emptySection">
+            <img class="loadingCircleImg" src="images/loading-gif2.gif">
+            <div class="longeremptybox"></div>
+            <div class="longeremptybox"></div>
+            <div class="longeremptybox"></div>
+        </div>
+        </section>
+        <section class="place">
+            <div class="longemptybox"></div>
+        </section>
+        <footer>
+            123 Main Street • 555-555-5555 • support@us.com
+        </footer>
+        <script src="./blog.js"></script>
+</body>
+
+</html>

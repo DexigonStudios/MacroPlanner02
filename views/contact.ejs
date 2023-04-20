@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MacroPlanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+    <header class="navHeader scrolledSticky" id="navHeader">
+        <nav>
+            <ul>
+                <li class="navHeaderLogo">
+                    <div onclick="location.href='/';" style="cursor: pointer;">
+                        <img src="images/placeholderlogo.png">
+                        <h1>MacroPlanner</h1>
+                    </div>
+                </li>
+                <li class=" navHeaderSpacer">
+                </li>
+                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li onclick="location.href='/blog';"><a>Blog</a></li>
+                <li onclick="location.href='/about';"><a>About</a></li>
+                <li onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+        </nav>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("8ZkReM2jlTHhJ088k");
+            })();
+        </script>
+    </header>
+    <section>
+        <div class="contactHeader">
+            <p>Contact</p>
+        </div>
+        <div class="contactcontainer">
+            <form class="contactform">
+                <div class="contactformOne">
+                    <div class="contactNameDiv">
+                        <p class="contactName">Name</p>
+                        <input type="text" id="contactname" placeholder="Name">
+                        <p class="contactformerror" id="contactnameerror" style="display: none">Please enter a name</p>
+                    </div>
+                    <div class="contactFormDivider"></div>
+                    <div class="contactEmailDiv">
+                        <p class="contactName">Email</p>
+                        <input type="email" id="contactemail" placeholder="Email">
+                        <p class="contactformerror" id="contactemailerror" style="display: none">Please enter a valid email</p>
+                    </div>
+                </div>
+                <p class="contactName">Subject</p>
+                <input type="text" id="contactsubject" placeholder="Subject">
+                <p class="contactName">Message</p>
+                <textarea id="contactmessage" rows="4" placeholder="Message"
+                    style="resize: vertical; max-height: 400px; min-height: 120px;"></textarea>
+                <button type="submit" id="contactsendbutton">Submit</button>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="longemptybox"></div>
+        <div class="longemptybox"></div>
+    </section>
+    <footer>
+        123 Main Street • 555-555-5555 • support@us.com
+    </footer>
+    <script src="./contact.js"></script>
+</body>
+
+</html>

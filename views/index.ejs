@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MacroPlanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+    <header class="navHeader" id="navHeader">
+        <nav>
+            <ul>
+                <li class="navHeaderLogo">
+                    <div onclick="location.href='/';" style="cursor: pointer;">
+                        <img src="images/placeholderlogo.png">
+                        <h1>MacroPlanner</h1>
+                    </div>
+                </li>
+                <li class=" navHeaderSpacer">
+                </li>
+                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li onclick="location.href='/blog';"><a>Blog</a></li>
+                <li onclick="location.href='/about';"><a>About</a></li>
+                <li onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header class="homeHeader">
+        <div>
+            <h1 class="homeHeaderTitle">
+                MacroPlanner
+            </h1>
+            <h1 class="homeHeaderSlogan">
+                Find Recipes Made For You
+            </h1>
+            <button type="button" class="homeHeaderRecipeButton" onclick="location.href='/recipes';">Find
+                Recipes</button>
+        </div>
+    </header>
+    <section class="homeFeatureBoxSection">
+        <div class="homeFeatureBoxDiv">
+            <div class="homeFeatureBoxText">
+                <h1 class="homeFeatureBoxTitle">
+                    Find Tailored Recipes
+                </h1>
+                <h1 class="homeFeatureBoxPara">
+                    Whether you're looking to maintain a healthy diet or manage a medical condition, our platform offers
+                    personalized recipe suggestions that match your specific nutrient and calorie needs, making meal
+                    planning a breeze.
+                </h1>
+            </div>
+            <img class="homeFeatureBoxImg1" src="images/photo-1542010589005-d1eacc3918f2.jpeg">
+        </div>
+        <div class="homeFeatureBoxDiv">
+            <img class="homeFeatureBoxImg2" src="images/iStock_58717870_XLARGE.jpg">
+            <div class="homeFeatureBoxText">
+                <h1 class="homeFeatureBoxTitle">
+                    Discover New Food
+                </h1>
+                <h1 class="homeFeatureBoxPara">
+                    Our website features a wide selection of quality foods for you to discover. With a variety of
+                    ingredients, recipes, and cuisines available, you're sure to find something that will satisfy your
+                    cravings.
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="homeRecipeScrollerSection">
+        <h1>Choose From Over 100 Recipes</h1>
+        <div class="homeRecipeScroller" id="homeRecipeScroller"></div>
+    </section>
+    <section>
+        <div class="emptybox"></div>
+    </section>
+    <footer>
+        123 Main Street • 555-555-5555 • example@us.com
+    </footer>
+    <script>
+        document.addEventListener('scroll', () => {
+            const navHeader = document.querySelector('.navHeader');
+            if (window.scrollY > 0) {
+                navHeader.classList.add('scrolled');
+            } else {
+                navHeader.classList.remove('scrolled');
+            }
+        })
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
