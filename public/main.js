@@ -8,6 +8,7 @@ fetch('recipes.json')
 
 
 
+
 // window.addEventListener('load', () => {
 //     if (typeof localStorage !== 'undefined') {
 //         const recipeFile = localStorage.getItem('recipeFile');

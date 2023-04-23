@@ -34,16 +34,21 @@ const Recipe = require('./models/Recipe');
 //     }
 // })
 
-function test() {
+function test(_callback) {
     Recipe.find().then(data => {
         fs.writeFile('public/recipes.json', JSON.stringify(data), err => {
             if(err){
                 console.log(err);
+                _callback();
             } else {
                 console.log("file was written");
+                _callback();
             }
         })
-    }).catch(err => console.log(err))
+    }).catch(err => {
+        console.log(err)
+        _callback();
+    })
 }
 
 
@@ -52,8 +57,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/recipes", (req, res) => {
-    test();
-    res.render("recipes")
+    test(() => res.render("recipes"))
 })
 
 app.get("/blog", (req, res) => {
