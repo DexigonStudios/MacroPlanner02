@@ -1,57 +1,68 @@
-window.addEventListener('load', () => {
-    if (typeof localStorage !== 'undefined') {
-        const recipeFile = localStorage.getItem('recipeFile');
-        const recipeFileExpDate = localStorage.getItem('recipeFileExpDate');
+fetch('recipes.json')
+    .then(res => res.json())
+    .then(data => {
+      loadIndexPage(data);
+    })
 
-        const date = new Date().setSeconds(new Date().getSeconds() + 600);
 
-        if (recipeFile) {
-            const checkExpire = (new Date()).getTime() > JSON.parse(recipeFileExpDate).expDate;
-            if (checkExpire) {
-                fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
-                    .then(res => res.json())
-                    .then(data => {
-                        let recipelist = [];
-                        Object.values(data).forEach(val => recipelist.push(val));
-                        localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
-                        localStorage.setItem('recipeFileExpDate', JSON.stringify({
-                            expDate: date,
-                        }));
-                        loadIndexPage(localStorage.getItem('recipeFile'));
-                    })
-            } else {
-                loadIndexPage(localStorage.getItem('recipeFile'));
-            }
 
-        } else {
-            fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
-                .then(res => res.json())
-                .then(data => {
-                    let recipelist = [];
-                    Object.values(data).forEach(val => recipelist.push(val));
-                    localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
-                    localStorage.setItem('recipeFileExpDate', JSON.stringify({
-                        expDate: date,
-                    }));
-                    loadIndexPage(localStorage.getItem('recipeFile'));
-                })
-        }
-    } else {
-        fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
-            .then(res => res.json())
-            .then(data => {
-                let recipelist = [];
-                Object.values(data).forEach(val => recipelist.push(val));
-                loadIndexPage(JSON.stringify(recipelist[0]));
-            })
-    }
-})
+
+
+// window.addEventListener('load', () => {
+//     if (typeof localStorage !== 'undefined') {
+//         const recipeFile = localStorage.getItem('recipeFile');
+//         const recipeFileExpDate = localStorage.getItem('recipeFileExpDate');
+
+//         const date = new Date().setSeconds(new Date().getSeconds() + 600);
+
+//         if (recipeFile) {
+//             const checkExpire = (new Date()).getTime() > JSON.parse(recipeFileExpDate).expDate;
+//             if (checkExpire) {
+//                 fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
+//                     .then(res => res.json())
+//                     .then(data => {
+//                         let recipelist = [];
+//                         Object.values(data).forEach(val => recipelist.push(val));
+//                         localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
+//                         localStorage.setItem('recipeFileExpDate', JSON.stringify({
+//                             expDate: date,
+//                         }));
+//                         loadIndexPage(localStorage.getItem('recipeFile'));
+//                     })
+//             } else {
+//                 loadIndexPage(localStorage.getItem('recipeFile'));
+//             }
+
+//         } else {
+//             fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
+//                 .then(res => res.json())
+//                 .then(data => {
+//                     let recipelist = [];
+//                     Object.values(data).forEach(val => recipelist.push(val));
+//                     localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
+//                     localStorage.setItem('recipeFileExpDate', JSON.stringify({
+//                         expDate: date,
+//                     }));
+//                     loadIndexPage(localStorage.getItem('recipeFile'));
+//                 })
+//         }
+//     } else {
+//         fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
+//             .then(res => res.json())
+//             .then(data => {
+//                 let recipelist = [];
+//                 Object.values(data).forEach(val => recipelist.push(val));
+//                 loadIndexPage(JSON.stringify(recipelist[0]));
+//             })
+//     }
+// })
 
 
 function loadIndexPage(data) {
     let temp = [];
 
-    temp = JSON.parse(data);
+    temp = data;
+    console.log(temp);
 
     var popularNumList = [];
     var usedNumList = [0];
@@ -62,7 +73,6 @@ function loadIndexPage(data) {
         }
     }
 
-    console.log(popularNumList);
 
         for(let i = 1; i<=8; i++){
             document.getElementById(i+"link").id = temp[popularNumList[i]][0];
