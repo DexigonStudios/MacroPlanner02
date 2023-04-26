@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacroPlanner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+    <header class="navHeader scrolledSticky" id="navHeader">
+        <nav>
+            <ul>
+                <li class="navHeaderLogo">
+                    <div onclick="location.href='/';" style="cursor: pointer;">
+                        <img src="images/placeholderlogo.png">
+                        <h1>MacroPlanner</h1>
+                    </div>
+                </li>
+                <li class=" navHeaderSpacer">
+                </li>
+                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li onclick="location.href='/blog';"><a>Blog</a></li>
+                <li onclick="location.href='/about';"><a>About</a></li>
+                <li onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="contactHeader">
+            <p>Add Recipe</p>
+        </div>
+        <form class="addrecipeform" action="/addrecipe" method="post">
+            <div class="addrecipediv">
+                <p>Admin Password</p>
+                <input type="password" name="password" placeholder="Password">
+                <p>Recipe</p>
+                <input type="text" name="recipe" placeholder="Recipe">
+                <p>Serving</p>
+                <input type="text" name="serving" placeholder="Serving">
+                <p>Time</p>
+                <input type="text" name="time" placeholder="Time">
+                <p>Calorie</p>
+                <input type="text" name="calorie" placeholder="Calorie">
+                <p>Protein</p>
+                <input type="text" name="protein" placeholder="Protein">
+                <p>Carb</p>
+                <input type="text" name="carb" placeholder="Carb">
+                <p>Fat</p>
+                <input type="text" name="fat" placeholder="Fat">
+                <p>Image</p>
+                <textarea name="image" rows="1" placeholder="Image URL"
+                    style="resize: vertical; max-height: 400px; min-height: 60px;"></textarea>
+                <p>Website</p>
+                <textarea name="website" rows="1" placeholder="Website URL"
+                    style="resize: vertical; max-height: 400px; min-height: 60px;"></textarea>
+                <p>Ingredients</p>
+                <textarea name="ingredient" rows="6" placeholder="Ingredients"
+                    style="resize: vertical; max-height: 800px; min-height: 120px;"></textarea>
+                <p>Steps</p>
+                <textarea name="step" rows="6" placeholder="Steps"
+                    style="resize: vertical; max-height: 800px; min-height: 120px;"></textarea>
+                <p>Rank</p>
+                <input type="text" name="rank" placeholder="Rank">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <div class="longeremptybox"></div>
+    </section>
+    <footer>
+        123 Main Street • 555-555-5555 • support@us.com
+    </footer>
+</body>
+
+</html>

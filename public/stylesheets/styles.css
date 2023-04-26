@@ -853,7 +853,7 @@ footer {
 }
 
 .reciperecentlyaddedslider::after {
-    right: 0;
+    right: -1px;
     top: 0;
     transform: rotateZ(180deg);
 }
@@ -1944,7 +1944,63 @@ footer {
 
 
 
+/* Add Recipe */
+.addrecipediv {
+    width: calc(100vw - calc(30vw - 250px) - calc(30vw - 250px));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
 
+
+.addrecipediv input,
+.addrecipediv textarea {
+    font-family: 'Open Sans', sans-serif;
+    border: 0;
+    border-radius: 10px;
+    height: 24px;
+    width: calc(100% - 40px);
+    margin: 10px 0px 0px 0px;
+    padding: 15px 20px 15px 20px;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+.addrecipediv p {
+    margin: 0;
+    margin-left: 18px;
+    padding: 0;
+    position: relative;
+    bottom: -10px;
+}
+
+.addrecipediv button{
+    padding: 15px;
+    background-color: #F0A540;
+    color: white;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: all 0.25s ease;
+}
+
+.addrecipediv button:hover {
+    transition: all 0.3s ease;
+    transform: scale(103%);
+}
+
+.addrecipediv button:active{
+    transition: all 0.1s ease;
+    transform: scale(95%);
+}
 
 
 

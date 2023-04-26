@@ -1,52 +1,52 @@
-window.addEventListener('load', () => {
-    // var _lsTotal=0,_xLen,_x;for(_x in localStorage){ if(!localStorage.hasOwnProperty(_x)){continue;} _xLen= ((localStorage[_x].length + _x.length)* 2);_lsTotal+=_xLen; console.log(_x.substr(0,50)+" = "+ (_xLen/1024).toFixed(2)+" KB")};console.log("Total = " + (_lsTotal / 1024).toFixed(2) + " KB");
-    if (typeof localStorage !== 'undefined') {
-        const recipeFile = localStorage.getItem('recipeFile');
-        const recipeFileExpDate = localStorage.getItem('recipeFileExpDate');
+// window.addEventListener('load', () => {
+//     // var _lsTotal=0,_xLen,_x;for(_x in localStorage){ if(!localStorage.hasOwnProperty(_x)){continue;} _xLen= ((localStorage[_x].length + _x.length)* 2);_lsTotal+=_xLen; console.log(_x.substr(0,50)+" = "+ (_xLen/1024).toFixed(2)+" KB")};console.log("Total = " + (_lsTotal / 1024).toFixed(2) + " KB");
+//     if (typeof localStorage !== 'undefined') {
+//         const recipeFile = localStorage.getItem('recipeFile');
+//         const recipeFileExpDate = localStorage.getItem('recipeFileExpDate');
 
-        const date = new Date().setSeconds(new Date().getSeconds() + 600);
+//         const date = new Date().setSeconds(new Date().getSeconds() + 600);
 
-        if (recipeFile) {
-            const checkExpire = (new Date()).getTime() > JSON.parse(recipeFileExpDate).expDate;
-            if (checkExpire) {
-                fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
-                    .then(res => res.json())
-                    .then(data => {
-                        let recipelist = [];
-                        Object.values(data).forEach(val => recipelist.push(val));
-                        localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
-                        localStorage.setItem('recipeFileExpDate', JSON.stringify({
-                            expDate: date,
-                        }));
-                        loadIndexPage(localStorage.getItem('recipeFile'));
-                    })
-            } else {
-                loadIndexPage(localStorage.getItem('recipeFile'));
-            }
+//         if (recipeFile) {
+//             const checkExpire = (new Date()).getTime() > JSON.parse(recipeFileExpDate).expDate;
+//             if (checkExpire) {
+//                 fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
+//                     .then(res => res.json())
+//                     .then(data => {
+//                         let recipelist = [];
+//                         Object.values(data).forEach(val => recipelist.push(val));
+//                         localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
+//                         localStorage.setItem('recipeFileExpDate', JSON.stringify({
+//                             expDate: date,
+//                         }));
+//                         loadIndexPage(localStorage.getItem('recipeFile'));
+//                     })
+//             } else {
+//                 loadIndexPage(localStorage.getItem('recipeFile'));
+//             }
 
-        } else {
-            fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
-                .then(res => res.json())
-                .then(data => {
-                    let recipelist = [];
-                    Object.values(data).forEach(val => recipelist.push(val));
-                    localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
-                    localStorage.setItem('recipeFileExpDate', JSON.stringify({
-                        expDate: date,
-                    }));
-                    loadIndexPage(localStorage.getItem('recipeFile'));
-                })
-        }
-    } else {
-        fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
-            .then(res => res.json())
-            .then(data => {
-                let recipelist = [];
-                Object.values(data).forEach(val => recipelist.push(val));
-                loadIndexPage(JSON.stringify(recipelist[0]));
-            })
-    }
-})
+//         } else {
+//             fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
+//                 .then(res => res.json())
+//                 .then(data => {
+//                     let recipelist = [];
+//                     Object.values(data).forEach(val => recipelist.push(val));
+//                     localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
+//                     localStorage.setItem('recipeFileExpDate', JSON.stringify({
+//                         expDate: date,
+//                     }));
+//                     loadIndexPage(localStorage.getItem('recipeFile'));
+//                 })
+//         }
+//     } else {
+//         fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
+//             .then(res => res.json())
+//             .then(data => {
+//                 let recipelist = [];
+//                 Object.values(data).forEach(val => recipelist.push(val));
+//                 loadIndexPage(JSON.stringify(recipelist[0]));
+//             })
+//     }
+// })
 
 
 
@@ -57,12 +57,17 @@ window.addEventListener('load', () => {
 //     .then(res => res.json())
 //     .then(data => {
 
+
+fetch('recipes.json')
+    .then(res => res.json())
+    .then(data => {
+      loadIndexPage(data);
+    })
+
 function loadIndexPage(data) {
     let recipelist = [];
 
-    recipelist = JSON.parse(data);
-
-    recipelist.shift();
+    recipelist = data;
 
     var recipeCount = recipelist.length;
 
@@ -80,8 +85,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlide = document.createElement('div');
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack.append(homeRecipeScrollerSlide);
     }
@@ -90,8 +95,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlide = document.createElement('div');
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack.append(homeRecipeScrollerSlide);
     }
@@ -109,8 +114,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
         homeRecipeScrollerSlide.classList.add('two');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack2.append(homeRecipeScrollerSlide);
     }
@@ -120,8 +125,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
         homeRecipeScrollerSlide.classList.add('two');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack2.append(homeRecipeScrollerSlide);
     }
@@ -138,8 +143,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
         homeRecipeScrollerSlide.classList.add('three');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack3.append(homeRecipeScrollerSlide);
     }
@@ -149,8 +154,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
         homeRecipeScrollerSlide.classList.add('three');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack3.append(homeRecipeScrollerSlide);
     }
@@ -168,8 +173,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
         homeRecipeScrollerSlide.classList.add('four');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack4.append(homeRecipeScrollerSlide);
     }
@@ -179,8 +184,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
         homeRecipeScrollerSlide.classList.add('four');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack4.append(homeRecipeScrollerSlide);
     }
@@ -198,8 +203,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
         homeRecipeScrollerSlide.classList.add('five');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack5.append(homeRecipeScrollerSlide);
     }
@@ -209,8 +214,8 @@ function loadIndexPage(data) {
         let homeRecipeScrollerSlideImg = document.createElement('img');
         homeRecipeScrollerSlide.classList.add('homeRecipeScrollerSlide');
         homeRecipeScrollerSlide.classList.add('five');
-        homeRecipeScrollerSlide.id = recipelist[tempRand][0];
-        homeRecipeScrollerSlideImg.src = recipelist[tempRand][8];
+        homeRecipeScrollerSlide.id = recipelist[tempRand]["_id"];
+        homeRecipeScrollerSlideImg.src = recipelist[tempRand]["image"];
         homeRecipeScrollerSlide.append(homeRecipeScrollerSlideImg);
         homeRecipeScrollerTrack5.append(homeRecipeScrollerSlide);
     }

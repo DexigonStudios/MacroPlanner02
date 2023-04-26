@@ -29,58 +29,64 @@ window.addEventListener('load', () => {
     document.querySelectorAll(".recipesHeaderSearchBoxInputDiv.four input")[1].dispatchEvent(new Event("input"));
 
 
-    if (typeof localStorage !== 'undefined') {
-        const recipeFile = localStorage.getItem('recipeFile');
-        const recipeFileExpDate = localStorage.getItem('recipeFileExpDate');
+    // if (typeof localStorage !== 'undefined') {
+    //     const recipeFile = localStorage.getItem('recipeFile');
+    //     const recipeFileExpDate = localStorage.getItem('recipeFileExpDate');
 
-        const date = new Date().setSeconds(new Date().getSeconds() + 600);
+    //     const date = new Date().setSeconds(new Date().getSeconds() + 600);
 
-        if (recipeFile) {
-            const checkExpire = (new Date()).getTime() > JSON.parse(recipeFileExpDate).expDate;
-            if (checkExpire) {
-                fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
-                    .then(res => res.json())
-                    .then(data => {
-                        let recipelist = [];
-                        Object.values(data).forEach(val => recipelist.push(val));
-                        localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
-                        localStorage.setItem('recipeFileExpDate', JSON.stringify({
-                            expDate: date,
-                        }));
-                        loadIndexPage(localStorage.getItem('recipeFile'));
-                    })
-            } else {
-                loadIndexPage(localStorage.getItem('recipeFile'));
-            }
+    //     if (recipeFile) {
+    //         const checkExpire = (new Date()).getTime() > JSON.parse(recipeFileExpDate).expDate;
+    //         if (checkExpire) {
+    //             fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
+    //                 .then(res => res.json())
+    //                 .then(data => {
+    //                     let recipelist = [];
+    //                     Object.values(data).forEach(val => recipelist.push(val));
+    //                     localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
+    //                     localStorage.setItem('recipeFileExpDate', JSON.stringify({
+    //                         expDate: date,
+    //                     }));
+    //                     loadIndexPage(localStorage.getItem('recipeFile'));
+    //                 })
+    //         } else {
+    //             loadIndexPage(localStorage.getItem('recipeFile'));
+    //         }
 
-        } else {
-            fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
-                .then(res => res.json())
-                .then(data => {
-                    let recipelist = [];
-                    Object.values(data).forEach(val => recipelist.push(val));
-                    localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
-                    localStorage.setItem('recipeFileExpDate', JSON.stringify({
-                        expDate: date,
-                    }));
-                    loadIndexPage(localStorage.getItem('recipeFile'));
-                })
-        }
-    } else {
-        fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
-            .then(res => res.json())
-            .then(data => {
-                let recipelist = [];
-                Object.values(data).forEach(val => recipelist.push(val));
-                loadIndexPage(JSON.stringify(recipelist[0]));
-            })
-    }
+    //     } else {
+    //         fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
+    //             .then(res => res.json())
+    //             .then(data => {
+    //                 let recipelist = [];
+    //                 Object.values(data).forEach(val => recipelist.push(val));
+    //                 localStorage.setItem('recipeFile', JSON.stringify(recipelist[0]));
+    //                 localStorage.setItem('recipeFileExpDate', JSON.stringify({
+    //                     expDate: date,
+    //                 }));
+    //                 loadIndexPage(localStorage.getItem('recipeFile'));
+    //             })
+    //     }
+    // } else {
+    //     fetch('https://script.google.com/macros/s/AKfycbweBXTy56rMSExNExD0RH2kONYYDxHCNGQMOT8xvXCzScRtYXEhzVA9IhU7LN6ErozdCw/exec')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             let recipelist = [];
+    //             Object.values(data).forEach(val => recipelist.push(val));
+    //             loadIndexPage(JSON.stringify(recipelist[0]));
+    //         })
+    // }
 })
+
+fetch('recipes.json')
+    .then(res => res.json())
+    .then(data => {
+        loadIndexPage(data);
+    })
 
 function loadIndexPage(data) {
         let recipelist = [];
 
-    recipelist = JSON.parse(data);
+    recipelist = data;
 
         let filteredlist = [];
         currentlyShowingSearchNum = 0;
@@ -88,21 +94,19 @@ function loadIndexPage(data) {
 
         let searchrange = 0.2;
 
-        Object.values(data).forEach(val => recipelist.push(val));
-
         filteredlist = recipelist;
 
         filteredlist = filteredlist.filter((filteredlist) => {
-            return (parseInt(filteredlist[4]) >= calorieMin && parseInt(filteredlist[4]) <= calorieMax);
+            return (parseInt(filteredlist["calorie"]) >= calorieMin && parseInt(filteredlist["calorie"]) <= calorieMax);
         })
         filteredlist = filteredlist.filter((filteredlist) => {
-            return (parseInt(filteredlist[5]) >= proteinMin && parseInt(filteredlist[5]) <= proteinMax);
+            return (parseInt(filteredlist["protein"]) >= proteinMin && parseInt(filteredlist["protein"]) <= proteinMax);
         })
         filteredlist = filteredlist.filter((filteredlist) => {
-            return (parseInt(filteredlist[6]) >= carbsMin && parseInt(filteredlist[6]) <= carbsMax);
+            return (parseInt(filteredlist["carb"]) >= carbsMin && parseInt(filteredlist["carb"]) <= carbsMax);
         })
         filteredlist = filteredlist.filter((filteredlist) => {
-            return (parseInt(filteredlist[7]) >= fatMin && parseInt(filteredlist[7]) <= fatMax);
+            return (parseInt(filteredlist["fat"]) >= fatMin && parseInt(filteredlist["fat"]) <= fatMax);
         })
 
         totalfilteredlist = shuffle(filteredlist);
@@ -139,12 +143,12 @@ function loadSearchCards() {
         if (currentlyShowingSearchNum < totalfilteredlist.length) {
             let recipeSearchCardContainer = document.createElement('div');
             recipeSearchCardContainer.classList.add('recipeSearchCardContainer');
-            recipeSearchCardContainer.id = totalfilteredlist[currentlyShowingSearchNum][0];
+            recipeSearchCardContainer.id = totalfilteredlist[currentlyShowingSearchNum]["_id"];
             document.getElementById("recipeSearchResultDivTop").append(recipeSearchCardContainer);
 
             let recipeSearchCardBackImg = document.createElement('img');
             recipeSearchCardBackImg.classList.add('recipeSearchCardBackImg');
-            recipeSearchCardBackImg.src = totalfilteredlist[currentlyShowingSearchNum][8];
+            recipeSearchCardBackImg.src = totalfilteredlist[currentlyShowingSearchNum]["image"];
             recipeSearchCardContainer.append(recipeSearchCardBackImg);
 
             let recipeSearchCard = document.createElement('div');
@@ -152,7 +156,7 @@ function loadSearchCards() {
             recipeSearchCardContainer.append(recipeSearchCard);
 
             let recipeSearchCardImg = document.createElement('img');
-            recipeSearchCardImg.src = totalfilteredlist[currentlyShowingSearchNum][8];
+            recipeSearchCardImg.src = totalfilteredlist[currentlyShowingSearchNum]["image"];
             recipeSearchCard.append(recipeSearchCardImg);
 
             let recipeSearchCardText = document.createElement('div');
@@ -161,7 +165,7 @@ function loadSearchCards() {
 
             let recipeSearchCardRecipe = document.createElement('p');
             recipeSearchCardRecipe.classList.add('recipeSearchCardRecipe');
-            recipeSearchCardRecipe.innerHTML = totalfilteredlist[currentlyShowingSearchNum][1];
+            recipeSearchCardRecipe.innerHTML = totalfilteredlist[currentlyShowingSearchNum]["recipe"];
             recipeSearchCardText.append(recipeSearchCardRecipe);
 
             let recipeSearchCardInfo = document.createElement('div');
@@ -173,11 +177,11 @@ function loadSearchCards() {
             recipeSearchCardInfo.append(recipeSearchCardInfoPart1);
 
             let recipeSearchCardInfoPartp1 = document.createElement('p');
-            recipeSearchCardInfoPartp1.innerHTML = totalfilteredlist[currentlyShowingSearchNum][2] + " Servings";
+            recipeSearchCardInfoPartp1.innerHTML = totalfilteredlist[currentlyShowingSearchNum]["serving"] + " Servings";
             recipeSearchCardInfoPart1.append(recipeSearchCardInfoPartp1);
 
             let recipeSearchCardInfoPartp2 = document.createElement('p');
-            recipeSearchCardInfoPartp2.innerHTML = totalfilteredlist[currentlyShowingSearchNum][3] + " Minutes";
+            recipeSearchCardInfoPartp2.innerHTML = totalfilteredlist[currentlyShowingSearchNum]["time"] + " Minutes";
             recipeSearchCardInfoPart1.append(recipeSearchCardInfoPartp2);
 
             let recipeSearchCardInfoDivider = document.createElement('div');
@@ -189,11 +193,11 @@ function loadSearchCards() {
             recipeSearchCardInfo.append(recipeSearchCardInfoPart2);
 
             let recipeSearchCardInfoPartp3 = document.createElement('p');
-            recipeSearchCardInfoPartp3.innerHTML = totalfilteredlist[currentlyShowingSearchNum][4] + " Calories";
+            recipeSearchCardInfoPartp3.innerHTML = totalfilteredlist[currentlyShowingSearchNum]["calorie"] + " Calories";
             recipeSearchCardInfoPart2.append(recipeSearchCardInfoPartp3);
 
             let recipeSearchCardInfoPartp4 = document.createElement('p');
-            recipeSearchCardInfoPartp4.innerHTML = totalfilteredlist[currentlyShowingSearchNum][5] + "g Protein";
+            recipeSearchCardInfoPartp4.innerHTML = totalfilteredlist[currentlyShowingSearchNum]["protein"] + "g Protein";
             recipeSearchCardInfoPart2.append(recipeSearchCardInfoPartp4);
 
             let recipeSearchCardInfoPart3 = document.createElement('div');
@@ -201,11 +205,11 @@ function loadSearchCards() {
             recipeSearchCardInfo.append(recipeSearchCardInfoPart3);
 
             let recipeSearchCardInfoPartp5 = document.createElement('p');
-            recipeSearchCardInfoPartp5.innerHTML = totalfilteredlist[currentlyShowingSearchNum][6] + "g Carbs";
+            recipeSearchCardInfoPartp5.innerHTML = totalfilteredlist[currentlyShowingSearchNum]["carb"] + "g Carbs";
             recipeSearchCardInfoPart3.append(recipeSearchCardInfoPartp5);
 
             let recipeSearchCardInfoPartp6 = document.createElement('p');
-            recipeSearchCardInfoPartp6.innerHTML = totalfilteredlist[currentlyShowingSearchNum][7] + "g Fat";
+            recipeSearchCardInfoPartp6.innerHTML = totalfilteredlist[currentlyShowingSearchNum]["fat"] + "g Fat";
             recipeSearchCardInfoPart3.append(recipeSearchCardInfoPartp6);
 
             recipeSearchCardContainer.animate([

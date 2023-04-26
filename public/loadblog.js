@@ -166,8 +166,6 @@ function loadBlogPage(data) {
     let relatedbloglist = shuffle(bloglist);
     var addNumRelatdBlog = 0;
 
-    console.log(relatedbloglist);
-
     for (var i = 1; i < Math.min(6 + addNumRelatdBlog, bloglist.length + 1); i++) {
         if (relatedbloglist[i - 1][0] != blog) {
             document.getElementById(i - addNumRelatdBlog + "w").id = relatedbloglist[i - 1][0];

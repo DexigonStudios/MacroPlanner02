@@ -1,50 +1,74 @@
 const mongoose = require('mongoose');
+const passport = require('passport');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 const recipeSchema = new mongoose.Schema({
-    recipe:{
+    recipe: {
         type: String,
         required: true
     },
-    serving:{
+    serving: {
         type: String,
         required: true
     },
-    time:{
+    time: {
         type: String,
         required: true
     },
-    calorie:{
+    calorie: {
         type: String,
         required: true
     },
-    protein:{
+    protein: {
         type: String,
         required: true
     },
-    carb:{
+    carb: {
         type: String,
         required: true
     },
-    fat:{
+    fat: {
         type: String,
         required: true
     },
-    image:{
+    image: {
         type: String,
         required: true
     },
-    website:{
+    website: {
         type: String,
         required: true
     },
-    ingredient:{
+    ingredient: {
         type: String,
         required: true
     },
-    step:{
+    step: {
         type: String,
         required: true
-    }
+    },
+    rank: {
+        type: String,
+        required: false
+    },
 })
 
-module.exports = mongoose.model('Recipe', recipeSchema);
+const logInSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
+})
+
+// logInSchema.plugin(passportLocalMongoose);
+
+const Recipe = mongoose.model('Recipe', recipeSchema);
+const LogIn = mongoose.model('LogIn', logInSchema);
+
+module.exports = {
+    Recipe, LogIn
+};
