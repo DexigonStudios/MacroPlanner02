@@ -28,6 +28,12 @@ window.addEventListener('load', () => {
     document.querySelectorAll(".recipesHeaderSearchBoxInputDiv.four input")[0].dispatchEvent(new Event("input"));
     document.querySelectorAll(".recipesHeaderSearchBoxInputDiv.four input")[1].dispatchEvent(new Event("input"));
 
+    fetch('recipes.json')
+    .then(res => res.json())
+    .then(data => {
+        loadIndexPage(data);
+    })
+
 
     // if (typeof localStorage !== 'undefined') {
     //     const recipeFile = localStorage.getItem('recipeFile');
@@ -77,11 +83,6 @@ window.addEventListener('load', () => {
     // }
 })
 
-fetch('recipes.json')
-    .then(res => res.json())
-    .then(data => {
-        loadIndexPage(data);
-    })
 
 function loadIndexPage(data) {
         let recipelist = [];

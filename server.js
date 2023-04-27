@@ -139,7 +139,7 @@ function test(_callback) {
 
 
 app.get("/", (req, res) => {
-    res.render("index")
+    test(() => res.render("index"))
 })
 
 app.get("/recipes", (req, res) => {
@@ -147,7 +147,7 @@ app.get("/recipes", (req, res) => {
 })
 
 app.get("/blog", (req, res) => {
-    res.render("blog")
+    test(() => res.render("blog"))
 })
 
 app.get("/about", (req, res) => {
@@ -159,11 +159,11 @@ app.get("/contact", (req, res) => {
 })
 
 app.get("/recipesearch", (req, res) => {
-    res.render("recipesearch")
+    test(() => res.render("recipesearch"))
 })
 
 app.get("/recipepage", (req, res) => {
-    res.render("recipepage")
+    test(() => res.render("recipepage"))
 })
 
 app.get("/blogpage", (req, res) => {

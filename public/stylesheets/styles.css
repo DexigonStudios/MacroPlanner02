@@ -44,7 +44,7 @@ input[type=number] {
     position: fixed;
     width: 100%;
     top: 0;
-    height: 75px;
+    height: 60px;
     z-index: 25;
     transition: 0.4s ease;
 }
@@ -82,7 +82,7 @@ input[type=number] {
 .navHeader ul a {
     cursor: pointer;
     color: rgb(255, 255, 255);
-    font-size: 18px;
+    font-size: 17px;
     text-decoration: none;
     transition: all 0.25s ease;
 }
@@ -129,8 +129,8 @@ input[type=number] {
 }
 
 .navHeaderLogo div img {
-    height: 50px;
-    width: 53px;
+    height: 45px;
+    width: 48px;
     margin: 0px 15px 0px 0px;
     -webkit-filter: invert(100%);
     filter: invert(100%);
@@ -189,19 +189,19 @@ input[type=number] {
 
 .homeHeaderTitle {
     color: white;
-    font-size: 54px;
+    font-size: 50px;
     letter-spacing: 2.5px;
     margin: 0;
     padding: 0;
     position: relative;
     top: 10px;
     text-align: left;
-    text-shadow: 1.5px 0 0 currentColor;
+    text-shadow: 1.2px 0 0 currentColor;
 }
 
 .homeHeaderSlogan {
     color: white;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 500;
     margin: 20px 0px 35px 0px;
     padding: 0;
@@ -215,7 +215,7 @@ input[type=number] {
     border-width: 0px;
     font-size: 24px;
     margin: 30px 0px 0px 0px;
-    padding: 15px 70px 15px 70px;
+    padding: 14px 60px 14px 60px;
     box-shadow: #F0A54B 0px 0px 30px;
     background-color: #F0A54B;
     color: rgb(255, 255, 255);
@@ -258,30 +258,31 @@ input[type=number] {
 .homeFeatureBoxTitle {
     color: rgb(0, 0, 0);
     font-weight: 600;
-    font-size: 32px;
+    font-size: 30px;
     text-align: left;
 }
 
 .homeFeatureBoxPara {
     color: rgba(0, 0, 0, 0.8);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     text-align: left;
+    line-height: 24px;
 }
 
 .homeFeatureBoxImg1 {
     border-radius: 15px;
     margin: 50px 0px 50px calc(22vw - 200px);
-    height: calc(4vw + 240px);
-    width: calc(4vw + 420px);
+    height: calc(4vw + 200px);
+    width: calc(4vw + 380px);
     object-fit: cover;
 }
 
 .homeFeatureBoxImg2 {
     border-radius: 15px;
     margin: 50px calc(22vw - 200px) 50px 0px;
-    height: calc(4vw + 240px);
-    width: calc(4vw + 420px);
+    height: calc(4vw + 200px);
+    width: calc(4vw + 380px);
     object-fit: cover;
 }
 
@@ -302,7 +303,7 @@ input[type=number] {
     margin-right: calc(30vw - 250px);
     color: black;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 30px;
     margin: 10px 0px 40px 0px;
     text-shadow: 0.7px 0 0 currentColor;
     text-align: left;
@@ -461,7 +462,7 @@ footer {
 /* Recipes */
 
 .recipesHeader {
-    height: 550px;
+    height: 520px;
     width: calc(100vw - calc(30vw - 250px) - calc(30vw - 250px));
     margin-left: calc(30vw - 250px);
     margin-right: calc(30vw - 250px);
@@ -480,8 +481,8 @@ footer {
     background-color: #F3F4F6;
     border-radius: 20px;
     padding: 24px;
-    width: 380px;
-    height: 440px;
+    width: 340px;
+    height: 420px;
     z-index: 2;
     box-shadow: -4px 4px 5px 0.5px rgba(0, 0, 0, 0.15);
 }
@@ -491,14 +492,14 @@ footer {
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    margin-left: calc(12vw - 450px);
+    margin-left: calc(12vw - 400px);
     width: 1050px;
     height: 100%;
     z-index: 1;
 }
 
 .recipesHeaderSearchDivTop {
-    height: 380px;
+    height: 360px;
     margin-bottom: 10px;
 }
 
@@ -531,7 +532,7 @@ footer {
     width: 100%;
     border-radius: 15px;
     border-width: 0px;
-    font-size: 25px;
+    font-size: 24px;
     background-color: #F0A54B;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -812,7 +813,7 @@ footer {
     margin-bottom: -10px;
     text-align: left;
     color: rgb(0, 0, 0);
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     text-shadow: 0.7px 0 0 currentColor;
 }
@@ -913,7 +914,7 @@ footer {
 
 .recipeSearchResultNumSection p {
     color: rgba(0, 0, 0, 0.8);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
     text-shadow: 0.2px 0 0 currentColor;
     letter-spacing: 0.8px;
@@ -958,7 +959,7 @@ footer {
     margin-right: 0;
     border-radius: 15px;
     border-width: 0px;
-    font-size: 25px;
+    font-size: 24px;
     background-color: #F0A54B;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -1072,7 +1073,7 @@ footer {
     margin: 0;
     padding: 0;
     color: rgb(41, 41, 41);
-    font-size: 17px;
+    font-size: 16px;
     text-align: left;
     text-shadow: 0.4px 0 0 currentColor;
 }
@@ -1139,14 +1140,14 @@ footer {
 .recipePageHeaderInfo {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
 }
 
 .recipePageHeaderRecipe {
     color: rgba(0, 0, 0, 0.9);
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 800;
     text-shadow: 0.8px 0 0 currentColor;
     margin: 0;
@@ -1168,7 +1169,7 @@ footer {
 
 .recipePageHeaderInfo div p {
     color: rgba(0, 0, 0, 0.7);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     text-shadow: 0.4px 0 0 currentColor;
     margin: 3px 0px 3px 0px;
@@ -1273,7 +1274,7 @@ footer {
 
 .ingredientinfotext tr {
     color: rgba(0, 0, 0, 0.8);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 40px;
     text-decoration: none;
@@ -1283,7 +1284,7 @@ footer {
 
 .stepinfotext tr {
     color: rgba(0, 0, 0, 0.8);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     text-indent: 65px;
     line-height: 35px;
@@ -1379,7 +1380,7 @@ footer {
 
 .recipeWideCardContainerRecipe {
     color: rgba(0, 0, 0, 0.9);
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 800;
     letter-spacing: 0px;
     height: 100%;
@@ -1467,7 +1468,7 @@ footer {
     color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bolder;
     text-shadow: 0.1px 0 0 currentColor;
     text-align: left;
@@ -1722,7 +1723,7 @@ footer {
     margin-bottom: 20px;
     line-height: 26px;
     padding: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: thin;
 }
 
@@ -1732,7 +1733,7 @@ footer {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: thin;
     display: list-item;
     margin-left: 2em;
@@ -1887,7 +1888,7 @@ footer {
 
 .contactName {
     color: rgb(0, 0, 0)e;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     margin: 20px 0px 0px 0px;
     padding: 0;
@@ -1904,7 +1905,7 @@ footer {
     padding: 15px 20px 15px 20px;
     outline: none;
     background-color: rgb(240, 240, 240);
-    font-size: 17px;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
@@ -1966,7 +1967,7 @@ footer {
     padding: 15px 20px 15px 20px;
     outline: none;
     background-color: rgb(240, 240, 240);
-    font-size: 17px;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
