@@ -104,8 +104,8 @@ function loadIndexPage(data) {
             document.getElementById(i+"pro4").innerHTML = temp[temp.length-9+i]["protein"] + "g Protein";
             document.getElementById(i+"car4").innerHTML = temp[temp.length-9+i]["carb"] + "g Carbs";
             document.getElementById(i+"fat4").innerHTML = temp[temp.length-9+i]["fat"] + "g Fat";
-            document.getElementById(i+"rec3").innerHTML = temp[popularNumList[i-1]]["recipe"];
-            document.getElementById(i+"rec4").innerHTML = temp[popularNumList[i-1]]["recipe"];
+            document.getElementById(i+"rec3").innerHTML = temp[temp.length-9+i]["recipe"];
+            document.getElementById(i+"rec4").innerHTML = temp[temp.length-9+i]["recipe"];
         }
 
         for(let i = 1; i<=15; i++){
