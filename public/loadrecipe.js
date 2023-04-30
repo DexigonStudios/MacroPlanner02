@@ -68,6 +68,7 @@ function loadIndexPage(data) {
     recipe = recipelist.indexOf(recipelist.find(item => item._id === tempid));
 
 
+
     document.getElementById("recipePageSection").style.display = "block";
     document.getElementById("recipePageEmptySection").style.display = "none";
 
@@ -83,8 +84,10 @@ function loadIndexPage(data) {
     document.getElementById("recipefat").innerHTML = recipelist[recipe]["fat"] + "g Fat";
     document.getElementById("imagetest").src = recipelist[recipe]["image"];
 
-    let alsotrylist = recipelist;
+    let alsotrylist = recipelist.slice();
+    alsotrylist.splice(recipe, 1);
     alsotrylist = shuffle(alsotrylist);
+
 
     for (var i = 1; i < 9; i++) {
         document.getElementById(i + "w").id = alsotrylist[i]["_id"];
@@ -172,17 +175,17 @@ function loadIndexPage(data) {
         fill: 'forwards'
     });
 
-
     for (let i = 1; i <= 10; i++) {
-        let tempRand = generateRandom(1, usedNumList, recipelist.length)[0];
+        let tempRand = generateRandom(1, usedNumList, alsotrylist.length)[0];
         usedNumList.push(tempRand);
-        document.getElementById(i + "linke").id = recipelist[tempRand]["_id"];
-        document.getElementById(i + "ie").src = recipelist[tempRand]["image"];
-        document.getElementById(i + "te").innerHTML = recipelist[tempRand]["recipe"];
-        document.getElementById(i + "cale").innerHTML = recipelist[tempRand]["calorie"] + " Calories";
-        document.getElementById(i + "proe").innerHTML = recipelist[tempRand]["protein"] + "g Protein";
-        document.getElementById(i + "care").innerHTML = recipelist[tempRand]["carb"] + "g Carbs";
-        document.getElementById(i + "fate").innerHTML = recipelist[tempRand]["fat"] + "g Fat";
+        document.getElementById(i + "linke").id = alsotrylist[tempRand]["_id"];
+        document.getElementById(i + "ie").src = alsotrylist[tempRand]["image"];
+        document.getElementById(i + "te").innerHTML = alsotrylist[tempRand]["recipe"];
+        document.getElementById(i + "cale").innerHTML = alsotrylist[tempRand]["calorie"] + " Calories";
+        document.getElementById(i + "proe").innerHTML = alsotrylist[tempRand]["protein"] + "g Protein";
+        document.getElementById(i + "care").innerHTML = alsotrylist[tempRand]["carb"] + "g Carbs";
+        document.getElementById(i + "fate").innerHTML = alsotrylist[tempRand]["fat"] + "g Fat";
+        document.getElementById(i + "erec").innerHTML = alsotrylist[tempRand]["recipe"];
     }
 
 }

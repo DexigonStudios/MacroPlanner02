@@ -12,20 +12,27 @@
 <body>
     <header class="navHeader" id="navHeader">
         <nav>
-            <ul>
+            <div class="navBlocker"></div>
+            <ul class="navHeaderLogoul">
                 <li class="navHeaderLogo">
                     <div onclick="location.href='/';" style="cursor: pointer;">
                         <img src="images/placeholderlogo.png">
                         <h1>MacroPlanner</h1>
                     </div>
                 </li>
-                <li class=" navHeaderSpacer">
-                </li>
-                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
-                <li onclick="location.href='/blog';"><a>Blog</a></li>
-                <li onclick="location.href='/about';"><a>About</a></li>
-                <li onclick="location.href='/contact';"><a>Contact</a></li>
+                <li class=" navHeaderSpacer"></li>
             </ul>
+            <ul class="navMenu">
+                <li class="navLink" onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li class="navLink" onclick="location.href='/blog';"><a>Blog</a></li>
+                <li class="navLink" onclick="location.href='/about';"><a>About</a></li>
+                <li class="navLink" onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
     <header class="homeHeader">
@@ -42,7 +49,7 @@
     </header>
     <section class="homeFeatureBoxSection">
         <div class="homeFeatureBoxDiv">
-            <div class="homeFeatureBoxText">
+            <div class="homeFeatureBoxText" id="homeFeatureOneOne">
                 <h1 class="homeFeatureBoxTitle">
                     Find Tailored Recipes
                 </h1>
@@ -52,7 +59,7 @@
                     planning a breeze.
                 </h1>
             </div>
-            <img class="homeFeatureBoxImg1" src="images/photo-1542010589005-d1eacc3918f2.jpeg">
+            <img id="homeFeatureOneTwo" class="homeFeatureBoxImg1" src="images/photo-1542010589005-d1eacc3918f2.jpeg">
         </div>
         <div class="homeFeatureBoxDiv">
             <img class="homeFeatureBoxImg2" src="images/iStock_58717870_XLARGE.jpg">
@@ -89,6 +96,7 @@
         })
     </script>
     <script src="./index.js"></script>
+    <script src="./navHamburger.js"></script>
 </body>
 
 </html>

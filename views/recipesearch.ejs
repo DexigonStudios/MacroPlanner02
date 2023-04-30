@@ -12,30 +12,36 @@
 <body>
     <header class="navHeader scrolledSticky" id="navHeader">
         <nav>
-            <ul>
+            <div class="navBlocker"></div>
+            <ul class="navHeaderLogoul">
                 <li class="navHeaderLogo">
                     <div onclick="location.href='/';" style="cursor: pointer;">
                         <img src="images/placeholderlogo.png">
                         <h1>MacroPlanner</h1>
                     </div>
                 </li>
-                <li class=" navHeaderSpacer">
-                </li>
-                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
-                <li onclick="location.href='/blog';"><a>Blog</a></li>
-                <li onclick="location.href='/about';"><a>About</a></li>
-                <li onclick="location.href='/contact';"><a>Contact</a></li>
+                <li class=" navHeaderSpacer"></li>
             </ul>
+            <ul class="navMenu">
+                <li class="navLink" onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li class="navLink" onclick="location.href='/blog';"><a>Blog</a></li>
+                <li class="navLink" onclick="location.href='/about';"><a>About</a></li>
+                <li class="navLink" onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
     <section class="recipeSearchResultNumSection">
         <p  id="resultsfoundtext">Loading Results...</p>
     </section>
     <section class="recipeSearchSection">
-        <div class="recipesHeaderSearchDiv">
+        <div class="recipesHeaderSearchDivSearch">
+            <h1 class="recipesHeaderSearchTitle">Filters</h1>
             <div class="recipesHeaderSearchDivTop">
-                <h1 class="recipesHeaderSearchTitle">Find a New Recipe</h1>
-                <h1 class="recipesHeaderSearchTitle2"><a href="https://www.calculator.net/macro-calculator.html" target="_blank">Calculate your macronutrient needs</a></h1>
                 <div class="recipesHeaderSearchBox">
                     <h1>Calories</h1>
                     <div class="sliderInput">
@@ -180,5 +186,7 @@
 </body>
 <script src="./searchSlider.js"></script>
 <script src="./findrecipe.js"></script>
+<script src="./navHamburger.js"></script>
+<script src="./recipeSearchFilterToggle.js"></script>
 
 </html>

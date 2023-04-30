@@ -12,20 +12,27 @@
 <body>
     <header class="navHeader scrolledSticky" id="navHeader">
         <nav>
-            <ul>
+            <div class="navBlocker"></div>
+            <ul class="navHeaderLogoul">
                 <li class="navHeaderLogo">
                     <div onclick="location.href='/';" style="cursor: pointer;">
                         <img src="images/placeholderlogo.png">
                         <h1>MacroPlanner</h1>
                     </div>
                 </li>
-                <li class=" navHeaderSpacer">
-                </li>
-                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
-                <li onclick="location.href='/blog';"><a>Blog</a></li>
-                <li onclick="location.href='/about';"><a>About</a></li>
-                <li onclick="location.href='/contact';"><a>Contact</a></li>
+                <li class=" navHeaderSpacer"></li>
             </ul>
+            <ul class="navMenu">
+                <li class="navLink" onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li class="navLink" onclick="location.href='/blog';"><a>Blog</a></li>
+                <li class="navLink" onclick="location.href='/about';"><a>About</a></li>
+                <li class="navLink" onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
     <section id="recipePageSection" style="display: none;">
@@ -192,155 +199,185 @@
                 You Might Also Like
             </div>
             <div class="exploreRecipeDiv">
-                <div class="recipeSmallCardContainer" id="1linke">
-                    <img id="1ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="1te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="1linke">
+                        <img id="1ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="1te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="1cale"></span><br>
+                                <span id="1proe"></span><br>
+                                <span id="1care"></span><br>
+                                <span id="1fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="1cale"></span><br>
-                            <span id="1proe"></span><br>
-                            <span id="1care"></span><br>
-                            <span id="1fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="1erec"></p>
                 </div>
-                <div class="recipeSmallCardContainer" id="2linke">
-                    <img id="2ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="2te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="2linke">
+                        <img id="2ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="2te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="2cale"></span><br>
+                                <span id="2proe"></span><br>
+                                <span id="2care"></span><br>
+                                <span id="2fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="2cale"></span><br>
-                            <span id="2proe"></span><br>
-                            <span id="2care"></span><br>
-                            <span id="2fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="2erec"></p>
                 </div>
-                <div class="recipeSmallCardContainer" id="3linke">
-                    <img id="3ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="3te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="3linke">
+                        <img id="3ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="3te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="3cale"></span><br>
+                                <span id="3proe"></span><br>
+                                <span id="3care"></span><br>
+                                <span id="3fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="3cale"></span><br>
-                            <span id="3proe"></span><br>
-                            <span id="3care"></span><br>
-                            <span id="3fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="3erec"></p>
                 </div>
-                <div class="recipeSmallCardContainer" id="4linke">
-                    <img id="4ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="4te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="4linke">
+                        <img id="4ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="4te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="4cale"></span><br>
+                                <span id="4proe"></span><br>
+                                <span id="4care"></span><br>
+                                <span id="4fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="4cale"></span><br>
-                            <span id="4proe"></span><br>
-                            <span id="4care"></span><br>
-                            <span id="4fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="4erec"></p>
                 </div>
-                <div class="recipeSmallCardContainer" id="5linke">
-                    <img id="5ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="5te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="5linke">
+                        <img id="5ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="5te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="5cale"></span><br>
+                                <span id="5proe"></span><br>
+                                <span id="5care"></span><br>
+                                <span id="5fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="5cale"></span><br>
-                            <span id="5proe"></span><br>
-                            <span id="5care"></span><br>
-                            <span id="5fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="5erec"></p>
                 </div>
-                <div class="recipeSmallCardContainer" id="6linke">
-                    <img id="6ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="6te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="6linke">
+                        <img id="6ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="6te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="6cale"></span><br>
+                                <span id="6proe"></span><br>
+                                <span id="6care"></span><br>
+                                <span id="6fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="6cale"></span><br>
-                            <span id="6proe"></span><br>
-                            <span id="6care"></span><br>
-                            <span id="6fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="6erec"></p>
                 </div>
-                <div class="recipeSmallCardContainer" id="7linke">
-                    <img id="7ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="7te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="7linke">
+                        <img id="7ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="7te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="7cale"></span><br>
+                                <span id="7proe"></span><br>
+                                <span id="7care"></span><br>
+                                <span id="7fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="7cale"></span><br>
-                            <span id="7proe"></span><br>
-                            <span id="7care"></span><br>
-                            <span id="7fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="7erec"></p>
                 </div>
-                <div class="recipeSmallCardContainer" id="8linke">
-                    <img id="8ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="8te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="8linke">
+                        <img id="8ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="8te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="8cale"></span><br>
+                                <span id="8proe"></span><br>
+                                <span id="8care"></span><br>
+                                <span id="8fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="8cale"></span><br>
-                            <span id="8proe"></span><br>
-                            <span id="8care"></span><br>
-                            <span id="8fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="8erec"></p>
                 </div>
-                <div class="recipeSmallCardContainer" id="9linke">
-                    <img id="9ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="9te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="9linke">
+                        <img id="9ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="9te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="9cale"></span><br>
+                                <span id="9proe"></span><br>
+                                <span id="9care"></span><br>
+                                <span id="9fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="9cale"></span><br>
-                            <span id="9proe"></span><br>
-                            <span id="9care"></span><br>
-                            <span id="9fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="9erec"></p>
                 </div>
-                <div class="recipeSmallCardContainer" id="10linke">
-                    <img id="10ie" src="images/gray.jpg">
-                    <div class="recipeSmallCardOverlay"></div>
-                    <div class="recipeSmallCardTextDiv">
-                        <div class="recipeSmallCardRecipe">
-                            <p class="recipeSmallCardRecipe" id="10te"></p>
+                <div class="explorRecipeSmallCard">
+                    <div class="recipeSmallCardContainer" id="10linke">
+                        <img id="10ie" src="images/gray.jpg">
+                        <div class="recipeSmallCardOverlay"></div>
+                        <div class="recipeSmallCardTextDiv">
+                            <div class="recipeSmallCardRecipe">
+                                <p class="recipeSmallCardRecipe" id="10te"></p>
+                            </div>
+                            <p class="recipeSmallCardInfo">
+                                <span id="10cale"></span><br>
+                                <span id="10proe"></span><br>
+                                <span id="10care"></span><br>
+                                <span id="10fate"></span><br>
+                            </p>
                         </div>
-                        <p class="recipeSmallCardInfo">
-                            <span id="10cale"></span><br>
-                            <span id="10proe"></span><br>
-                            <span id="10care"></span><br>
-                            <span id="10fate"></span><br>
-                        </p>
                     </div>
+                    <p class="explorRecipeSmallCardRecipe" id="10erec"></p>
                 </div>
             </div>
         </div>
@@ -362,6 +399,7 @@
         123 Main Street • 555-555-5555 • example@us.com
     </footer>
     <script src="./loadrecipe.js"></script>
+    <script src="./navHamburger.js"></script>
 </body>
 
 </html>

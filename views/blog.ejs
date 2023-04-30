@@ -12,20 +12,27 @@
 <body>
     <header class="navHeader scrolledSticky" id="navHeader">
         <nav>
-            <ul>
+            <div class="navBlocker"></div>
+            <ul class="navHeaderLogoul">
                 <li class="navHeaderLogo">
                     <div onclick="location.href='/';" style="cursor: pointer;">
                         <img src="images/placeholderlogo.png">
                         <h1>MacroPlanner</h1>
                     </div>
                 </li>
-                <li class=" navHeaderSpacer">
-                </li>
-                <li onclick="location.href='/recipes';"><a>Recipes</a></li>
-                <li onclick="location.href='/blog';"><a>Blog</a></li>
-                <li onclick="location.href='/about';"><a>About</a></li>
-                <li onclick="location.href='/contact';"><a>Contact</a></li>
+                <li class=" navHeaderSpacer"></li>
             </ul>
+            <ul class="navMenu">
+                <li class="navLink" onclick="location.href='/recipes';"><a>Recipes</a></li>
+                <li class="navLink" onclick="location.href='/blog';"><a>Blog</a></li>
+                <li class="navLink" onclick="location.href='/about';"><a>About</a></li>
+                <li class="navLink" onclick="location.href='/contact';"><a>Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
     <div class="contactHeader">
@@ -39,7 +46,7 @@
                 <span class="mainBlogText" id="mainBlogText"></span><br>
                 <!-- <span class="mainBlogReadMore" id="mainBlogReadMore">Read More</span><br> -->
             </p>
-            <div class="mainBlogImgContainer">
+            <div class="mainBlogImgContainer" id="mainBlogImgContainer">
                 <img class="mainBlogImg" id="mainBlogImg" src="images/gray.jpg">
             </div>
         </div>
@@ -72,6 +79,7 @@
             123 Main Street • 555-555-5555 • support@us.com
         </footer>
         <script src="./blog.js"></script>
+        <script src="./navHamburger.js"></script>
 </body>
 
 </html>

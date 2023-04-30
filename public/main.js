@@ -85,6 +85,8 @@ function loadIndexPage(data) {
             document.getElementById(i+"pro2").innerHTML = temp[popularNumList[i-1]]["protein"] + "g Protein";
             document.getElementById(i+"car2").innerHTML = temp[popularNumList[i-1]]["carb"] + "g Carbs";
             document.getElementById(i+"fat2").innerHTML = temp[popularNumList[i-1]]["fat"] + "g Fat";
+            document.getElementById(i+"rec").innerHTML = temp[popularNumList[i-1]]["recipe"];
+            document.getElementById(i+"rec2").innerHTML = temp[popularNumList[i-1]]["recipe"];
         }
 
         for(let i = 1; i<=8; i++){
@@ -102,6 +104,8 @@ function loadIndexPage(data) {
             document.getElementById(i+"pro4").innerHTML = temp[temp.length-9+i]["protein"] + "g Protein";
             document.getElementById(i+"car4").innerHTML = temp[temp.length-9+i]["carb"] + "g Carbs";
             document.getElementById(i+"fat4").innerHTML = temp[temp.length-9+i]["fat"] + "g Fat";
+            document.getElementById(i+"rec3").innerHTML = temp[popularNumList[i-1]]["recipe"];
+            document.getElementById(i+"rec4").innerHTML = temp[popularNumList[i-1]]["recipe"];
         }
 
         for(let i = 1; i<=15; i++){
@@ -114,6 +118,7 @@ function loadIndexPage(data) {
             document.getElementById(i+"proe").innerHTML = temp[tempRand]["protein"] + "g Protein";
             document.getElementById(i+"care").innerHTML = temp[tempRand]["carb"] + "g Carbs";
             document.getElementById(i+"fate").innerHTML = temp[tempRand]["fat"] + "g Fat";
+            document.getElementById(i+"erec").innerHTML = temp[tempRand]["recipe"];
         }
 
 
