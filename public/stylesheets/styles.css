@@ -130,17 +130,17 @@ input[type=number] {
 
 .navHeader ul a:hover {
     color: #F0A54B;
-    text-shadow: 0.5px 0 0 currentColor;
+    /* text-shadow: 0.5px 0 0 currentColor; */
 }
 
 .navHeader.scrolled ul a:hover {
     color: #F0A54B;
-    text-shadow: 0.5px 0 0 currentColor;
+    /* text-shadow: 0.5px 0 0 currentColor; */
 }
 
 .navHeader.scrolledSticky ul a:hover {
     color: #F0A54B;
-    text-shadow: 0.5px 0 0 currentColor;
+    /* text-shadow: 0.5px 0 0 currentColor; */
 }
 
 .navHeaderSpacer {
@@ -197,14 +197,16 @@ input[type=number] {
     display: none;
     cursor: pointer;
     width: 100px;
+    padding-left: 50px;
     z-index: 2;
 }
 
 .bar {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 3px auto;
+    width: 40px;
+    height: 5px;
+    margin: 5px auto;
+    border-radius: 5px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: white;
@@ -259,7 +261,7 @@ input[type=number] {
     position: relative;
     top: 10px;
     text-align: left;
-    text-shadow: 1.2px 0 0 currentColor;
+    /* text-shadow: 1.2px 0 0 currentColor; */
 }
 
 .homeHeaderSlogan {
@@ -368,7 +370,7 @@ input[type=number] {
     font-weight: bold;
     font-size: 30px;
     margin: 10px 0px 40px 0px;
-    text-shadow: 0.7px 0 0 currentColor;
+    /* text-shadow: 0.7px 0 0 currentColor; */
     text-align: left;
 }
 
@@ -539,7 +541,8 @@ footer {
     overflow: visible;
 }
 
-.recipesHeaderSearchDiv, .recipesHeaderSearchDivSearch {
+.recipesHeaderSearchDiv,
+.recipesHeaderSearchDivSearch {
     background-color: #F3F4F6;
     border-radius: 20px;
     padding: 24px;
@@ -573,7 +576,7 @@ footer {
 .recipesHeaderSearchTitle {
     color: black;
     font-size: 30px;
-    text-shadow: 0.7px 0 0 currentColor;
+    /* text-shadow: 0.7px 0 0 currentColor; */
     margin: 0;
     padding: 0;
 }
@@ -582,7 +585,7 @@ footer {
     color: black;
     font-size: 24px;
     font-weight: normal;
-    text-shadow: 0.2px 0 0 currentColor;
+    /* text-shadow: 0.2px 0 0 currentColor; */
     margin: 0;
     padding: 0;
 }
@@ -612,7 +615,7 @@ footer {
     background-color: #F0A54B;
     color: rgb(255, 255, 255);
     font-weight: 500;
-    text-shadow: 0.4px 0 0 currentColor;
+    /* text-shadow: 0.4px 0 0 currentColor; */
     transition: all 0.25s ease;
 }
 
@@ -677,7 +680,7 @@ footer {
     width: 140px;
     font-size: 18px;
     color: rgba(0, 0, 0, 0.9);
-    text-shadow: 0.3px 0 0 currentColor;
+    /* text-shadow: 0.3px 0 0 currentColor; */
     padding: 12px 0px 0px 8px;
 }
 
@@ -704,7 +707,7 @@ footer {
     width: 140px;
     font-size: 12px;
     font-weight: 400;
-    text-shadow: 0.2px 0 0 currentColor;
+    /* text-shadow: 0.2px 0 0 currentColor; */
     color: gray;
     padding: 2px 0px 0px 10px;
     position: absolute;
@@ -854,7 +857,7 @@ footer {
     font-weight: 500;
     font-size: 19px;
     font-weight: bolder;
-    text-shadow: 0.1px 0 0 currentColor;
+    /* text-shadow: 0.1px 0 0 currentColor; */
     text-align: left;
     letter-spacing: 0.4px;
     -webkit-box-orient: vertical;
@@ -890,7 +893,7 @@ footer {
     color: rgb(0, 0, 0);
     font-size: 30px;
     font-weight: bold;
-    text-shadow: 0.7px 0 0 currentColor;
+    /* text-shadow: 0.7px 0 0 currentColor; */
 }
 
 .reciperecentlyadded {
@@ -1001,7 +1004,7 @@ footer {
     color: rgba(0, 0, 0, 0.8);
     font-size: 20px;
     font-weight: 800;
-    text-shadow: 0.2px 0 0 currentColor;
+    /* text-shadow: 0.2px 0 0 currentColor; */
     letter-spacing: 0.8px;
     margin: 0px 0px 10px 0px;
     padding: 0;
@@ -1048,7 +1051,7 @@ footer {
     background-color: #F0A54B;
     color: rgb(255, 255, 255);
     font-weight: 500;
-    text-shadow: 0.4px 0 0 currentColor;
+    /* text-shadow: 0.4px 0 0 currentColor; */
     transition: all 0.25s ease;
 }
 
@@ -1160,7 +1163,7 @@ footer {
     color: rgb(41, 41, 41);
     font-size: 16px;
     text-align: left;
-    text-shadow: 0.4px 0 0 currentColor;
+    /* text-shadow: 0.4px 0 0 currentColor; */
 }
 
 .recipeSearchCardInfoDivider {
@@ -1202,7 +1205,7 @@ footer {
     width: 200px;
     font-size: 18px;
     font-weight: 500;
-    text-shadow: 0.2px 0 0 currentColor;
+    /* text-shadow: 0.2px 0 0 currentColor; */
     text-align: left;
     letter-spacing: 0.4px;
     -webkit-box-orient: vertical;
@@ -1264,7 +1267,7 @@ footer {
     color: rgba(0, 0, 0, 0.9);
     font-size: 40px;
     font-weight: 800;
-    text-shadow: 0.8px 0 0 currentColor;
+    /* text-shadow: 0.8px 0 0 currentColor; */
     margin: 0;
     margin-bottom: 25px;
     -webkit-box-orient: vertical;
@@ -1286,7 +1289,7 @@ footer {
     color: rgba(0, 0, 0, 0.7);
     font-size: 20px;
     font-weight: 500;
-    text-shadow: 0.4px 0 0 currentColor;
+    /* text-shadow: 0.4px 0 0 currentColor; */
     margin: 3px 0px 3px 0px;
 }
 
@@ -1345,7 +1348,7 @@ footer {
     color: rgba(0, 0, 0, 0.8);
     font-size: 28px;
     font-weight: 800;
-    text-shadow: 0.4px 0 0 currentColor;
+    /* text-shadow: 0.4px 0 0 currentColor; */
     margin: 0px 0px 30px 0px;
     text-decoration: none;
 }
@@ -1354,7 +1357,7 @@ footer {
     color: rgba(0, 0, 0, 0.8);
     font-size: 28px;
     font-weight: 800;
-    text-shadow: 0.4px 0 0 currentColor;
+    /* text-shadow: 0.4px 0 0 currentColor; */
     margin: -20px 0px 20px 0px;
     text-decoration: none;
 }
@@ -1421,7 +1424,7 @@ footer {
     color: rgba(0, 0, 0, 0.6);
     font-size: 26px;
     font-weight: 900;
-    text-shadow: 0.4px 0 0 currentColor;
+    /* text-shadow: 0.4px 0 0 currentColor; */
     margin: 0px 0px 4px 0px;
 }
 
@@ -1585,7 +1588,7 @@ footer {
     padding: 0;
     font-size: 30px;
     font-weight: bolder;
-    text-shadow: 0.1px 0 0 currentColor;
+    /* text-shadow: 0.1px 0 0 currentColor; */
     text-align: left;
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -1603,7 +1606,7 @@ footer {
     padding: 0;
     font-size: 17px;
     font-weight: thin;
-    text-shadow: 0.1px 0 0 currentColor;
+    /* text-shadow: 0.1px 0 0 currentColor; */
     text-align: left;
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -1619,7 +1622,7 @@ footer {
     padding: 0;
     font-size: 17px;
     font-weight: thin;
-    text-shadow: 0.1px 0 0 currentColor;
+    /* text-shadow: 0.1px 0 0 currentColor; */
     text-align: left;
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -1636,7 +1639,7 @@ footer {
     padding: 0;
     font-size: 19px;
     font-weight: bold;
-    text-shadow: 0.1px 0 0 currentColor;
+    /* text-shadow: 0.1px 0 0 currentColor; */
     text-align: left;
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -1714,7 +1717,7 @@ footer {
     padding: 0;
     font-size: 14px;
     font-weight: thin;
-    text-shadow: 0.1px 0 0 currentColor;
+    /* text-shadow: 0.1px 0 0 currentColor; */
     text-align: left;
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -1732,7 +1735,7 @@ footer {
     padding: 0;
     font-size: 16px;
     font-weight: thin;
-    text-shadow: 0.1px 0 0 currentColor;
+    /* text-shadow: 0.1px 0 0 currentColor; */
     text-align: left;
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -1783,7 +1786,7 @@ footer {
     padding: 0;
     font-size: 40px;
     font-weight: bolder;
-    text-shadow: 0.1px 0 0 currentColor;
+    /* text-shadow: 0.1px 0 0 currentColor; */
     text-align: left;
     -webkit-box-orient: vertical;
     display: -webkit-box;
@@ -2119,6 +2122,36 @@ footer {
 }
 
 
+/*About*/
+
+.aboutTopdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(100vw - calc(30vw - 250px) - calc(30vw - 250px));
+    margin-left: calc(30vw - 250px);
+    margin-right: calc(30vw - 250px);
+}
+
+.aboutTopdiv h2 {
+    width: 25vw;
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    margin: auto;
+}
+
+.aboutTopdiv img {
+    border-radius: 15px;
+    border-width: 10px;
+    width: 680px;
+    height: 100%;
+    margin-left: 50px;
+    object-fit: cover;
+}
+
+
 
 
 
@@ -2145,7 +2178,8 @@ footer {
 
 /* Mobile Screen */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 900px),
+(orientation: portrait) {
     /* body {
         background-color: lightgreen;
     } */
@@ -2153,7 +2187,7 @@ footer {
     .hamburger {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
         justify-content: center;
     }
 
@@ -2163,15 +2197,15 @@ footer {
     }
 
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(15px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-15px) rotate(-45deg);
     }
 
     .navHeader nav {
-        width: 80vw;
+        width: 90vw;
     }
 
 
@@ -2185,19 +2219,52 @@ footer {
         width: calc(75vw - 120px);
         left: -75vw;
         padding: 50px;
-        padding-top: 80px;
-        gap: 30px;
+        padding-top: 120px;
+        gap: 40px;
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: center;
         transition: 0.3s ease;
+        top: 0;
+        -webkit-backface-visibility: hidden;
     }
+
+    .navHeader {
+        height: 90px;
+    }
+
+    .navHeaderLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .navHeaderLogo div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navHeaderLogo div img {
+        height: 58px;
+        width: 64px;
+        margin: 0px 15px 0px 0px;
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+
+    .navHeaderLogo div h1 {
+        font-size: 30px;
+    }
+
 
     .navHeader ul a {
         cursor: pointer;
         color: rgb(255, 255, 255);
-        font-size: 22px;
+        font-size: 48px;
         text-decoration: none;
         transition: all 0.25s ease;
     }
@@ -2212,17 +2279,17 @@ footer {
 
     .navHeader ul a:hover {
         color: #F0A54B;
-        text-shadow: 0.5px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
     }
 
     .navHeader.scrolled ul a:hover {
         color: #F0A54B;
-        text-shadow: 0.5px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
     }
 
     .navHeader.scrolledSticky ul a:hover {
         color: #F0A54B;
-        text-shadow: 0.5px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
     }
 
     .homeHeader {
@@ -2249,6 +2316,7 @@ footer {
     .homeFeatureBoxSection {
         width: 90vw;
         margin: 0 auto;
+        margin-top: 30px;
     }
 
     .homeFeatureBoxDiv {
@@ -2260,7 +2328,7 @@ footer {
     }
 
     .homeFeatureBoxText {
-        width: 80vw;
+        width: 90vw;
     }
 
 
@@ -2275,13 +2343,13 @@ footer {
     .homeFeatureBoxImg1 {
         margin: 0 auto;
         height: 50vw;
-        width: 80vw;
+        width: 90vw;
     }
 
     .homeFeatureBoxImg2 {
         margin: 0 auto;
         height: 50vw;
-        width: 80vw;
+        width: 90vw;
     }
 
 
@@ -2296,7 +2364,7 @@ footer {
     }
 
     .homeRecipeScrollerSection h1 {
-        width: 80vw;
+        width: 90vw;
     }
 
 
@@ -2343,7 +2411,7 @@ footer {
 
     .recipesHeader {
         height: 520px;
-        width: 80vw;
+        width: 90vw;
         margin-left: calc(30vw - 250px);
         margin-right: calc(30vw - 250px);
         margin: 0 auto;
@@ -2379,7 +2447,7 @@ footer {
     .recipesHeaderSearchTitle {
         color: black;
         font-size: 30px;
-        text-shadow: 0.7px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         margin: 0;
         padding: 0;
     }
@@ -2409,7 +2477,7 @@ footer {
         background-color: #F0A54B;
         color: rgb(255, 255, 255);
         font-weight: 500;
-        text-shadow: 0.4px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         transition: all 0.25s ease;
     }
 
@@ -2450,7 +2518,7 @@ footer {
         width: 30vw;
         font-size: 18px;
         color: rgba(0, 0, 0, 0.9);
-        text-shadow: 0.3px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         padding: 12px 0px 0px 8px;
     }
 
@@ -2477,7 +2545,7 @@ footer {
         width: 140px;
         font-size: 12px;
         font-weight: 400;
-        text-shadow: 0.2px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         color: gray;
         padding: 2px 0px 0px 10px;
         position: absolute;
@@ -2627,7 +2695,7 @@ footer {
         font-weight: 500;
         font-size: 19px;
         font-weight: bolder;
-        text-shadow: 0.1px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         text-align: left;
         letter-spacing: 0.4px;
         -webkit-box-orient: vertical;
@@ -2653,7 +2721,7 @@ footer {
 
     .reciperecentlyaddedbanner {
         height: 75px;
-        width: 80vw;
+        width: 90vw;
         margin-left: calc(30vw - 250px);
         margin-right: calc(30vw - 250px);
         margin: 0 auto;
@@ -2663,7 +2731,7 @@ footer {
         color: rgb(0, 0, 0);
         font-size: 30px;
         font-weight: bold;
-        text-shadow: 0.7px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
     }
 
     .reciperecentlyadded {
@@ -2677,7 +2745,7 @@ footer {
         margin: 0 auto;
         padding-top: 22px;
         position: relative;
-        width: 80vw;
+        width: 90vw;
         margin-left: calc(30vw - 250px);
         margin-right: calc(30vw - 250px);
         display: grid;
@@ -2758,7 +2826,7 @@ footer {
     .recipeSearchResultNumSection {
         border-bottom: 3px solid rgba(0, 0, 0, 0.3);
         height: 70px;
-        width: 80vw;
+        width: 90vw;
         margin: 0 auto;
         margin-bottom: 20px;
         display: flex;
@@ -2772,7 +2840,7 @@ footer {
         color: rgba(0, 0, 0, 0.8);
         font-size: 20px;
         font-weight: 800;
-        text-shadow: 0.2px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         letter-spacing: 0.8px;
         margin: 0px 0px 10px 0px;
         padding: 0;
@@ -2806,7 +2874,7 @@ footer {
         background-color: #F3F4F6;
         border-radius: 20px;
         padding: 0px 24px 0px 24px;
-        width: calc(80vw - 48px);
+        width: calc(90vw - 48px);
         margin-bottom: 40px;
         height: 60px;
         z-index: 2;
@@ -2828,7 +2896,7 @@ footer {
         color: black;
         font-size: 20px;
         font-weight: normal;
-        text-shadow: 0.7px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         margin: 0;
         margin-top: -5px;
         padding: 20px 0px 20px 0px;
@@ -2850,7 +2918,7 @@ footer {
         background-color: #F0A54B;
         color: rgb(255, 255, 255);
         font-weight: 500;
-        text-shadow: 0.4px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         transition: all 0.25s ease;
     }
 
@@ -2866,7 +2934,7 @@ footer {
         background-color: #F3F4F6;
         border-radius: 20px;
         padding: 0px 24px 24px 24px;
-        width: calc(80vw - 48px);
+        width: calc(90vw - 48px);
         height: 420px;
         z-index: 2;
         box-shadow: -4px 4px 5px 0.5px rgba(0, 0, 0, 0.15);
@@ -2878,7 +2946,7 @@ footer {
 
     .recipeSearchSection .recipesHeaderSearchTitle.active {
         color: black;
-        text-shadow: 0.7px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         margin-top: 5px;
         padding: 20px 0px 10px 0px;
     }
@@ -2894,7 +2962,7 @@ footer {
         background-color: #F0A54B;
         color: rgb(255, 255, 255);
         font-weight: 500;
-        text-shadow: 0.4px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         transition: all 0.25s ease;
     }
 
@@ -2924,7 +2992,7 @@ footer {
 
 
     .recipeSearchSection {
-        width: 80vw;
+        width: 90vw;
         margin: 0 auto;
         margin-bottom: 70px;
         display: flex;
@@ -2973,7 +3041,7 @@ footer {
         background-color: #F0A54B;
         color: rgb(255, 255, 255);
         font-weight: 500;
-        text-shadow: 0.4px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         transition: all 0.25s ease;
     }
 
@@ -3085,7 +3153,7 @@ footer {
         color: rgb(41, 41, 41);
         font-size: 16px;
         text-align: left;
-        text-shadow: 0.4px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
     }
 
     .recipeSearchCardInfoDivider {
@@ -3100,7 +3168,7 @@ footer {
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: center;
-        width: 80vw;
+        width: 90vw;
         margin-left: calc(30vw - 250px);
         margin-right: calc(30vw - 250px);
         margin: 0 auto;
@@ -3127,7 +3195,7 @@ footer {
         width: 200px;
         font-size: 18px;
         font-weight: 500;
-        text-shadow: 0.2px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         text-align: left;
         letter-spacing: 0.4px;
         -webkit-box-orient: vertical;
@@ -3153,14 +3221,14 @@ footer {
         margin: 0 auto;
         margin-top: 50px;
         margin-bottom: 40px;
-        width: 80vw;
+        width: 90vw;
         height: auto;
     }
 
     .recipePageHeaderImg {
         margin: 0 auto;
         border-radius: 15px;
-        width: 80vw;
+        width: 90vw;
         height: 50vw;
         object-fit: cover;
     }
@@ -3188,7 +3256,7 @@ footer {
         color: rgba(0, 0, 0, 0.9);
         font-size: 40px;
         font-weight: 800;
-        text-shadow: 0.8px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         margin: 0;
         margin-top: 20px;
         margin-bottom: 25px;
@@ -3212,7 +3280,7 @@ footer {
         color: rgba(0, 0, 0, 0.7);
         font-size: 20px;
         font-weight: 500;
-        text-shadow: 0.4px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         margin: 3px 0px 3px 0px;
     }
 
@@ -3230,7 +3298,7 @@ footer {
         align-items: top;
         margin: 0 auto;
         padding: 0;
-        width: 80vw;
+        width: 90vw;
     }
 
     .recipePageMainLeft {
@@ -3264,7 +3332,7 @@ footer {
         color: rgba(0, 0, 0, 0.8);
         font-size: 28px;
         font-weight: 800;
-        text-shadow: 0.4px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         margin: 0px 0px 30px 0px;
         text-decoration: none;
     }
@@ -3273,7 +3341,7 @@ footer {
         color: rgba(0, 0, 0, 0.8);
         font-size: 28px;
         font-weight: 800;
-        text-shadow: 0.4px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         margin: -20px 0px 20px 0px;
         text-decoration: none;
     }
@@ -3340,7 +3408,7 @@ footer {
         color: rgba(0, 0, 0, 0.6);
         font-size: 26px;
         font-weight: 900;
-        text-shadow: 0.4px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         margin: 0px 0px 4px 0px;
     }
 
@@ -3370,7 +3438,7 @@ footer {
 
     .mainBlogDiv {
         cursor: pointer;
-        width: 80vw;
+        width: 90vw;
         margin: 0 auto;
         margin-top: 70px;
         display: flex;
@@ -3382,7 +3450,7 @@ footer {
     }
 
     .mainBlogImgContainer {
-        width: 80vw;
+        width: 90vw;
         height: 48vw;
         border-radius: 15px;
         overflow: hidden;
@@ -3422,7 +3490,7 @@ footer {
         padding: 0;
         font-size: 30px;
         font-weight: bolder;
-        text-shadow: 0.1px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         text-align: left;
         -webkit-box-orient: vertical;
         display: -webkit-box;
@@ -3440,7 +3508,7 @@ footer {
         padding: 0;
         font-size: 17px;
         font-weight: thin;
-        text-shadow: 0.1px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         text-align: left;
         -webkit-box-orient: vertical;
         display: -webkit-box;
@@ -3456,7 +3524,7 @@ footer {
         padding: 0;
         font-size: 17px;
         font-weight: thin;
-        text-shadow: 0.1px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         text-align: left;
         -webkit-box-orient: vertical;
         display: -webkit-box;
@@ -3473,7 +3541,7 @@ footer {
         padding: 0;
         font-size: 19px;
         font-weight: bold;
-        text-shadow: 0.1px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         text-align: left;
         -webkit-box-orient: vertical;
         display: -webkit-box;
@@ -3484,7 +3552,7 @@ footer {
     }
 
     .allBlogsDiv {
-        width: 80vw;
+        width: 90vw;
         margin: 0 auto;
         margin-top: 25px;
         display: flex;
@@ -3549,7 +3617,7 @@ footer {
         padding: 0;
         font-size: 14px;
         font-weight: thin;
-        text-shadow: 0.1px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         text-align: left;
         -webkit-box-orient: vertical;
         display: -webkit-box;
@@ -3567,7 +3635,7 @@ footer {
         padding: 0;
         font-size: 16px;
         font-weight: thin;
-        text-shadow: 0.1px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         text-align: left;
         -webkit-box-orient: vertical;
         display: -webkit-box;
@@ -3580,7 +3648,7 @@ footer {
     /* Blog Page */
 
     .blogSection {
-        width: 80vw;
+        width: 90vw;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -3595,7 +3663,7 @@ footer {
         background-color: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        width: 80vw;
+        width: 90vw;
         display: flex;
         flex-direction: column;
     }
@@ -3612,7 +3680,7 @@ footer {
         padding: 0;
         font-size: 40px;
         font-weight: bolder;
-        text-shadow: 0.1px 0 0 currentColor;
+        text-shadow: 0px 0 0 currentColor;
         text-align: left;
         -webkit-box-orient: vertical;
         display: -webkit-box;
@@ -3639,7 +3707,7 @@ footer {
 
 
     .blogSectionImg {
-        width: 80vw;
+        width: 90vw;
         height: 50vw;
         border-radius: 15px;
         object-fit: cover;
@@ -3687,6 +3755,38 @@ footer {
         margin-left: 2em;
     }
 
+
+    /*About*/
+
+    .aboutTopdiv {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+    }
+
+    .aboutTopdiv h2 {
+        width: 90vw;
+        font-weight: 500;
+        font-size: 18px;
+        font-weight: normal;
+        text-align: center;
+        margin: auto;
+    }
+
+    .aboutTopdiv img {
+        margin: 0 auto;
+        border-radius: 20px;
+        width: 90vw;
+        height: 50vw;
+        margin-bottom: 50px;
+    }
+
+    .aboutTopdiv #aboutImg {
+        order: -1;
+    }
 
 }
 
