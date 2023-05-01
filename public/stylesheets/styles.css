@@ -203,9 +203,9 @@ input[type=number] {
 
 .bar {
     display: block;
-    width: 40px;
-    height: 5px;
-    margin: 5px auto;
+    width: 30px;
+    height: 3px;
+    margin: 3px auto;
     border-radius: 5px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -2197,11 +2197,11 @@ footer {
     }
 
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(15px) rotate(45deg);
+        transform: translateY(9px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-15px) rotate(-45deg);
+        transform: translateY(-9px) rotate(-45deg);
     }
 
     .navHeader nav {
@@ -2219,8 +2219,8 @@ footer {
         width: calc(75vw - 120px);
         left: -75vw;
         padding: 50px;
-        padding-top: 120px;
-        gap: 40px;
+        padding-top: 80px;
+        gap: 30px;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -2231,7 +2231,7 @@ footer {
     }
 
     .navHeader {
-        height: 90px;
+        height: 60px;
     }
 
     .navHeaderLogo {
@@ -2249,22 +2249,22 @@ footer {
     }
 
     .navHeaderLogo div img {
-        height: 58px;
-        width: 64px;
+        height: 40px;
+        width: 44px;
         margin: 0px 15px 0px 0px;
         -webkit-filter: invert(100%);
         filter: invert(100%);
     }
 
     .navHeaderLogo div h1 {
-        font-size: 30px;
+        font-size: 22px;
     }
 
 
     .navHeader ul a {
         cursor: pointer;
         color: rgb(255, 255, 255);
-        font-size: 48px;
+        font-size: 24px;
         text-decoration: none;
         transition: all 0.25s ease;
     }
@@ -3109,7 +3109,7 @@ footer {
         height: 110px;
         width: 90%;
         /* width: 515px; */
-        padding: 10px 50px 10px 15px;
+        padding: 10px 10px 10px 10px;
     }
 
     .recipeSearchCardRecipe {
@@ -3565,7 +3565,7 @@ footer {
     .blogCardContainer {
         cursor: pointer;
         display: inline-block;
-        width: 37vw;
+        width: 42vw;
         margin-bottom: 50px;
         border-radius: 15px;
         transition: 0.4s ease;
@@ -3576,7 +3576,7 @@ footer {
     }
 
     .blogCardImgContainer {
-        width: 37vw;
+        width: 42vw;
         height: 200px;
         border-radius: 15px;
         overflow: hidden;
